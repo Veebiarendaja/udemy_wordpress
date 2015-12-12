@@ -384,7 +384,7 @@ footer li.signup-link a:hover {
 }
 
 /* === BlOG STYLES ==== */
-.post {
+.post, .widget {
     position: relative;
     border: solid 1px #ddd;
     background: white;
@@ -425,6 +425,33 @@ footer li.signup-link a:hover {
 
 .post-details i.fa:first-child {
     padding: 0;
+}
+
+/* === WIDGET ==== */
+
+.widget {
+    padding: 20px;
+}
+
+.widget h4 {
+    margin: 0 0 10px;
+    padding: 0 0 10px;
+    border-bottom: solid 1px #ddd;
+}
+
+.widget ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.widget ul li {
+    margin: 0 0 5px;
+}
+
+.widget ul li:hover {
+    position: relative;
+    left: 1px;
 }
 
 /* === COMMENT ==== */
@@ -478,6 +505,35 @@ i.ci {
 .ci.ci-community    { background-position: -120px 0; }
 .ci.ci-instructor   { background-position: -160px 0; }
 .ci.ci-device       { background-position: -200px 0; }
+
+/* === FORMS ==== */
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+textarea {
+    color: gray;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 6px 12px;
+}
+
+
+
 
 /* === MEDIA QUERIES ==== */
 
