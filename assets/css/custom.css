@@ -588,7 +588,34 @@ textarea {
     padding: 6px 12px;
 }
 
+input[type="submit"],
+button[type="submit"] {
+    display: inline-block;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.33;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    border: 0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
 
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    outline: none;
+    border: none;
+    background: #aaa;
+}
 
 
 /* === MEDIA QUERIES ==== */
