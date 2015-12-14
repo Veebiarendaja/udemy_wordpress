@@ -24,27 +24,34 @@
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bootstrap' ); ?></a>
 
-	<header id="masthead" class="site-header" role="banner">
-		<div class="site-branding">
-			<?php
-			if ( is_front_page() && is_home() ) : ?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-			<?php else : ?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-			<?php
-			endif;
+	<!--HEADER ===================================-->
+	<header class="site-header" role="banner">
+		<!--NAVBAR-->
+		<div class="navbar-wrapper">
+			<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+				<div class="container">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+							<span class="sr-only">Toggle Navigation</span>
+							<span class="glyphicon glyphicon-option-horizontal"></span>
+						</button>
+						<!--button-->
+						<a href="/" class="navbar-brand"><img src="assets/img/logo.png" alt="BootStrap Wordpress"></a>
+					</div>
+					<!--navbar-header-->
 
-			$description = get_bloginfo( 'description', 'display' );
-			if ( $description || is_customize_preview() ) : ?>
-				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
-			<?php
-			endif; ?>
-		</div><!-- .site-branding -->
-
-		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bootstrap' ); ?></button>
-			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
-		</nav><!-- #site-navigation -->
-	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+					<?php
+						wp_nav_menu( array(
+							'theme-location' => 'primary',
+							'container' => 'nav',
+							'container-class' => 'navbar-collapse collapse',
+							'menu_class' => 'nav navbar-nav navbar-right'
+						));
+					?>
+				</div>
+				<!--container-->
+			</div>
+			<!--navbar-->
+		</div>
+		<!--navbar-wrapper-->
+	</header>
