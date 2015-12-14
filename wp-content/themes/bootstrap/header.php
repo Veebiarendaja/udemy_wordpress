@@ -50,7 +50,7 @@
                             <span class="glyphicon glyphicon-option-horizontal"></span>
                         </button>
                         <!--button-->
-                        <a href="/" class="navbar-brand"><img src="assets/img/logo.png" alt="BootStrap Wordpress"></a>
+                        <a href="/" class="navbar-brand"><img src="<?php bloginfo('stylesheet_directory');?>/assets/img/logo.png" alt="BootStrap Wordpress"></a>
                     </div>
                     <!--navbar-header-->
 
