@@ -292,7 +292,6 @@ get_header(); ?>
                     </div>
                 </div>
                 <!--row-->
-
                 <p class="lead"><?php echo $bio_excerpt; ?></p>
                 <p><?php echo $full_bio; ?></p>
 
