@@ -58,4 +58,3 @@
 <footer class="entry-footer">
     <?php bootstrap_entry_footer(); ?>
 </footer><!-- .entry-footer -->
-</article><!-- #post-## -->
