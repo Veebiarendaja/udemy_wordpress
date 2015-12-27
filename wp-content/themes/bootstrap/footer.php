@@ -20,29 +20,30 @@
         <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
                 <h2>Are you ready to take your coding skills to the <strong>next level</strong>?</h2>
+
                 <p><a href="" class="btn btn-lg btn-block btn-success">Yes, sign me up!</a></p>
             </div>
-        </div> <!--row-->
-    </div> <!--container-->
+        </div>
+        <!--row-->
+    </div>
+    <!--container-->
 </section>
 
 <!--FOOTER ===================================-->
 <footer>
     <div class="container">
         <div class="col-sm-3">
-            <p><a href=""><img src="<?php bloginfo('');?>assets/img/logo.png" alt="Bootstrap Wordpress"></a></p>
+            <p><a href=""><img src="<?php bloginfo(''); ?>assets/img/logo.png" alt="Bootstrap Wordpress"></a></p>
         </div>
 
         <div class="col-sm-6">
-            <nav>
-                <ul class="list-unstyled list-inline">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Resources</a></li>
-                    <li><a href="">Contact</a></li>
-                    <li class="signup-link"><a href="">Sign up now</a></li>
-                </ul>
-            </nav>
+            <?php
+            wp_nav_menu(array(
+                'theme-location' => 'footer',
+                'container' => 'nav',
+                'menu_class' => 'list-unstyled list-inline'
+            ));
+            ?>
         </div>
 
         <div class="col-sm-3">
@@ -50,7 +51,8 @@
                 &copy; Brad Hussey
             </p>
         </div>
-    </div> <!--container-->
+    </div>
+    <!--container-->
 </footer>
 
 <!--MODAL ===================================-->
